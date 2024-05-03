@@ -92,9 +92,12 @@ services:
     ports:
       - "5433:5432"
     environment:
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: example
+      POSTGRES_DB: iotlocomotive
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
 
   adminer:
     image: adminer:latest
