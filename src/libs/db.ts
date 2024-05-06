@@ -1,5 +1,5 @@
 import Locomotive from "@/models/locomotive";
-import { Collection, MongoClient, Db, MongoServerError } from "mongodb";
+import { Collection, MongoClient } from "mongodb";
 import dotenv from "dotenv";
 import Logger from "@/libs/logger";
 
